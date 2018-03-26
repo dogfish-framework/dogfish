@@ -1,0 +1,14 @@
+SetEnv FRONTAL_CONTROLER index.php
+SetEnv FRONTAL_CONTROLER_SUB_DIR /
+
+<IfModule mod_rewrite.c>
+    Options -MultiViews
+    RewriteEngine On
+
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule . %{ENV:FRONTAL_CONTROLER} [L]
+
+    RewriteCond %{HTTP:Authorization} ^(.*)
+    RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
+</IfModule>
