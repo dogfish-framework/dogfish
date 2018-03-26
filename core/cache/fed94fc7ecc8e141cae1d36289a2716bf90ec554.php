@@ -11,7 +11,7 @@
     <link href="<?php echo e(url('css/materialize/materialize.min.css')); ?>" type="text/css" rel="stylesheet">
     <!-- if !isDemo-->
 
-    <title>DOGFISH</title>
+    <title><?php echo $__env->yieldContent('title','Home'); ?></title>
 </head>
 <body>
 
@@ -34,8 +34,10 @@
     <li><a href="#">Docummentation</a></li><hr>
     <li><a href="#">Demontration</a></li><hr>
     <li><a href="#">Sources</a></li><hr>
-    </ul>
-
+</ul>
+<div class="container">
+    <?php echo $__env->yieldContent('container',''); ?>
+</div>
 
 <script src="<?php echo e(url('js/materialize/jquery.min.js')); ?>"></script>
 <script src="<?php echo e(url('js/materialize/materialize.min.js')); ?>"></script>

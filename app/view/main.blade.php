@@ -11,13 +11,15 @@
     <link href="{{url('css/materialize/materialize.min.css')}}" type="text/css" rel="stylesheet">
     <!-- if !isDemo-->
 
-    <title>DOGFISH</title>
+    <title>@yield('title','Home')</title>
 </head>
 <body>
 
 <nav>
     <div class="nav-wrapper">
-        <a href="#!" class="brand-logo center">Dog-Fish FRAMEWORD</a>
+        <a href="/" class="brand-logo ">Dog-FISH
+            <img src="{{url('DOGFISH.png')}}" width="80" height="50">
+        </a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
             <li><a href="#">Docummentation</a></li>
@@ -32,8 +34,10 @@
     <li><a href="#">Docummentation</a></li><hr>
     <li><a href="#">Demontration</a></li><hr>
     <li><a href="#">Sources</a></li><hr>
-    </ul>
-
+</ul>
+<div class="container">
+    @yield('container','')
+</div>
 
 <script src="{{url('js/materialize/jquery.min.js')}}"></script>
 <script src="{{url('js/materialize/materialize.min.js')}}"></script>
