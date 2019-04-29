@@ -1,5 +1,5 @@
 {
-    "name": "dogfish-framework/dogfish",
+    "name": "dogfish/dogfish",
     "type": "project",
     "description": "The Dogfish Framework.",
     "require": {
