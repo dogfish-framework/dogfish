@@ -1,6 +1,6 @@
 Apropos de DogFish
 
-DogFish est un framework php, il a ete creer par Pape Samba Ndour 
+DogFish est un framework php, il a ete créer par Pape Samba Ndour 
 élève ingénieur a l'Institut Superieur d'informatique.
 
 Il  vous  offre  un squelettede  de site  web  bien architecturé. 
