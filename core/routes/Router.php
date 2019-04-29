@@ -27,7 +27,7 @@ class Router
     /**
      * @var array
      */
-    private $routes = [];
+    private  $routes = [];
     /**
      * @var Route
      */
@@ -64,8 +64,8 @@ class Router
     private function getDefaultOption()
     {
         return [
-            'controllerNamespace' => '',
-            'middlewareNamespace' => '',
+            'controllerNamespace' => "\\App\\controller",
+            'middlewareNamespace' => "\\App\\middleware",
             'subDirectory' => $this->getOrDefault(getenv('FRONTAL_CONTROLER_SUB_DIR'), "")
         ];
     }
@@ -113,7 +113,11 @@ class Router
      */
     public function mixe($method, $pathPattern, $mixes)
     {
-        if (strpos($pathPattern, "/") !== 1) {
+       // die(strpos($pathPattern, "/").'jj');
+       // if (strpos($pathPattern, "/") !== 1) {
+       //     $pathPattern = "/" . $pathPattern;
+       // }
+        if (strpos($pathPattern, "/") !== 0) {
             $pathPattern = "/" . $pathPattern;
         }
         $this->currentProcededRoute = new Route($this, $method, $pathPattern, $mixes);
@@ -236,6 +240,7 @@ class Router
             $route = $this->routes[$i];
             if ($route->matchUrl()) {
                 $this->_404 = false;
+                //Mettres les parametres
                 $route->prepareRunning();
                 $return = $route->processMiddleware();
 

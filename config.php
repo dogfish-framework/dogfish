@@ -5,7 +5,7 @@ return $config =  [
         "database" =>[
             'driver'    => 'mysql',
             'host'      => 'localhost',
-            'database'  => 'tchalla',
+            'database'  => 'dogfish',
             'username'  => 'root',
             'password'  => 'root',
             'charset'   => 'utf8',
@@ -22,6 +22,9 @@ return $config =  [
             "controllerNamespace" => "\\App\\controller",
             "middlewareNamespace" => "\\App\\middleware",
         ],
+
+    ///////////////CONFIGURATION VUES /////////////////////////
+       "debug" => true
 ];
 
 

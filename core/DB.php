@@ -19,6 +19,4 @@ class DB extends Capsule
         $this->setAsGlobal();
         $this->bootEloquent();
     }
-
-
 }

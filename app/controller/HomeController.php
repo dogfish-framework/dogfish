@@ -9,14 +9,18 @@
 namespace App\controller;
 
 
+use App\model\User;
 use DogfishCore\Controller;
+use DogfishCore\http\Response;
 use Jenssegers\Blade\Blade;
 
 class HomeController extends Controller
 {
     public function index()
     {
-
-        return $this->render('home');
+        $users = User::all();
+        Response::withStatus(200);
+      return  Response::withJson($users);
+      //  return $this->render('home',compact('users'));
     }
 }

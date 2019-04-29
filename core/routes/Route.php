@@ -75,7 +75,8 @@ class Route
     public function __construct($router, $method, $pathPattern, $mixes, $caseSensitive = false)
     {
         $this->router = $router;
-        $this->currentRoute = rtrim($_SERVER['REQUEST_URI'], $this->routeSeparator);
+        $this->currentRoute = rtrim( $_SERVER['REQUEST_URI'], $this->routeSeparator);
+        ///
         $this->currentRoute = str_replace("?{$_SERVER['QUERY_STRING']}", "", $this->currentRoute);
         $this->pathPattern = rtrim($pathPattern, $this->routeSeparator);
         $this->setAllowedMethod($method);

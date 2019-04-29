@@ -1,4 +1,5 @@
 <?php
+define("CONFIG",require '../config.php') ;
 function baseUrl()
 {
     // output: /myproject/index.php
@@ -22,8 +23,8 @@ function baseUrl()
 
 function config($key)
 {
-    $config = require_once '../config.php';
-    return $config[$key];
+
+    return CONFIG[$key];
 }
 
 function url($url)
