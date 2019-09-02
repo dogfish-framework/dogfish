@@ -30,6 +30,7 @@ class Started
             error_reporting(E_ALL);
         }
         Route::run();
+        //die('ok');
     }
 }
 
