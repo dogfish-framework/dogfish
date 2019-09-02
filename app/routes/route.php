@@ -12,6 +12,6 @@ Route::get('/','HomeController@index')->middleware(['LogActivity@log']);
 Route::get('diaz/{pape}',function ($diapp){
     echo "PACO : ". $diapp;
 });
-Route::get('/public',function (){
-    echo "public";
+Route::get('/test',function (){
+    echo "test";
 });
